@@ -1,0 +1,14 @@
+<div>
+  <p>Your payment methods</p>
+  <div class="methods-list">
+    @for (method of paymentMethods(); track method.cardNumber) {
+      <div class="payment-method">
+        <div class="payment-provider-placeholder"></div>
+        <span class="card-number">{{ method.cardNumber }}</span>
+        <app-button appearance="link" color="danger">DELETE</app-button>
+      </div>
+    }
+  </div>
+  <app-button>ADD NEW PAYMENT</app-button>
+
+</div>

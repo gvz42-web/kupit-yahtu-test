@@ -1,0 +1,15 @@
+<div class="subscription">
+  <p class="info">
+    Your subscription:
+    <span class="price">
+      {{ subscription()?.price || '' | currency: 'USD' : undefined : '.0'}}
+    </span>
+  </p>
+  <p class="next-charge">
+    Next charge will be
+    <span class="date">{{ subscription()?.nextCharge | date: 'd MMMM y' }}</span>
+  </p>
+  <app-button size="md" color="black">
+    CANCEL SUBSCRIPTION
+  </app-button>
+</div>

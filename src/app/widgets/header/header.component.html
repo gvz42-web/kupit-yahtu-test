@@ -1,0 +1,7 @@
+<header>
+  <nav class="menu">
+    @for (item of menuItems; track $index) {
+      <a class="menu-item" [routerLink]="item.path">{{ item.title | uppercase }}</a>
+    }
+  </nav>
+</header>
